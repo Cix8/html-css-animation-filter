@@ -2,36 +2,114 @@
     width: 100px;
     height: 100px;
     border: 1px solid red;
+    /* SOLUZIONE 1 */
+    transition: all 1.5s;
 }
+
+/* SOLUZIONE 1*/
+.ex-1-square:hover {
+    background-color: red;
+}
+
 .ex-2-square {
     width: 100px;
     height: 100px;
     background: red;
+    /* SOLUZIONE 2 */
+    transition: all 1.5s;
 }
+
+/* SOLUZIONE 2 */
+.ex-2-square:active {
+    width: 100%;
+}
+
 .ex-3-square {
     width: 100px;
     height: 100px;
     background: red;
+    /* SOLUZIONE 3 */
+    transition: all .5s;
 }
+
+/* SOLUZIONE 3 */
+.ex-3-square:hover {
+    border-radius: 50%;
+}
+
 .ex-4-square {
     width: 100px;
     height: 100px;
     background: red;
+    /* SOLUZIONE 4 */
+    transition: all 1.5s;
 }
+
+/* SOLUZIONE 4 */
+.ex-4-square:hover {
+    background-color: transparent;
+}
+
 .ex-5-square {
     margin: 20px;
     width: 60px;
     height: 60px;
     background: red;
+    /* SOLUZIONE 5 */
+    transition: all 1s;
 }
+
+/* SOLUZIONE 5 */
+.ex-5-square:hover {
+    transform: scale(1.5);
+}
+
+.ex-5-square:active {
+    transform: scale(.5);
+}
+
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+}
+
+/* SOLUZIONE 6 */
+.ex-6-img:hover {
+    filter: grayscale(1);
+}
+
+/* SOLUZIONE 7 */
+.ex-7-img {
+    transition: all 1.5s;
+}
+
+.ex-7-img:hover {
+    filter: grayscale(1) drop-shadow(5px 5px 5px rgb(0, 174, 255));
+}
+
+/* SOLUZIONE 8 */
+.ex-8-img {
+    transition: all 2s;
+}
+
+.ex-8-img:hover {
+    filter: sepia(1) hue-rotate(100deg);
+    border-radius: 30px;
 }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    /* SOLUZIONE 9 */
+    transition: all 2s;
 }
+
+/* SOLUZIONE 9 */
+.ex-9-img:hover {
+    transform: scale(1.5);
+    filter: grayscale(1) hue-rotate(80deg);
+    border-radius: 20px;
+}
+
 .ex-10-icon {
     font-size: 60px;
 }
