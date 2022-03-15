@@ -112,10 +112,39 @@
 
 .ex-10-icon {
     font-size: 60px;
+    /* SOLUZIONE 10 */
+    animation: rolling 1.5s linear infinite;
 }
+
+/* SOLUZIONE 10 */
+@keyframes rolling {
+    0% {
+        transform: rotate(1turn);
+    }
+}
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+/* SOLUZIONE 11 */
+.ex-11-icon:hover {
+    animation: rolling-2 1s linear;
+}
+
+@keyframes rolling-2 {
+    0% {
+        transform: rotate(0);
+    }
+    80% {
+        transform: rotate(315deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -144,4 +173,37 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+/* SOLUZIONE 12 */
+@keyframes moveTop {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+@keyframes moveBottom {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+}
+
+.ex-12-button:hover .ex-12-top-white {
+    animation: moveTop 1.5s linear;
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: moveBottom 1.5s linear;
 }
